@@ -1,0 +1,64 @@
+1. Everton
+2. Aston Villa
+3. Liverpool
+4. Arsenal
+5. Manchester United
+6. Manchester City
+7. Newcastle United
+8. Sunderland
+9. Chelsea
+10. Tottenham Hotspur
+11. West Bromwich Albion
+12. Bolton Wanderers
+13. Blackburn Rovers
+14. Sheffield Wednesday
+15. Derby County
+16. Wolverhampton Wanderers
+17. Middlesbrough
+18. Sheffield United
+19. Birmingham City
+20. Stoke City
+21. Nottingham Forest
+22. West Ham United
+23. Burnley
+24. Leeds United
+25. Leicester City
+26. Preston North End
+27. Southampton
+28. Coventry City
+29. Portsmouth
+30. Huddersfield Town
+31. Notts County
+32. Blackpool
+33. Ipswich Town
+34. Charlton Athletic
+35. Fulham
+36. Norwich City
+37. Queens Park Rangers
+38. Bury
+39. Luton Town
+40. Cardiff City
+41. Wimbledon
+42. Crystal Palace
+43. Oldham Athletic
+44. Bradford City
+45. Grimsby Town
+46. Bristol City
+47. Watford
+48. Wigan Athletic
+49. Brentford
+50. Accrington
+51. Swansea City
+52. Brighton & Hove Albion
+53. Oxford United
+54. Reading
+55. Bradford Park Avenue
+56. Millwall
+57. Hull City
+58. Darwen
+59. Barnsley
+60. Northampton
+61. Swindon Town
+62. Carlisle United
+63. Leyton Orient
+64. Glossop North End
