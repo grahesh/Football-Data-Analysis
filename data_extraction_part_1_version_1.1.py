@@ -1,12 +1,12 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
+# Name: module1
 # Purpose:
 #
-# Author:      GRSP
+# Author: GRSP
 #
-# Created:     30-05-2013
-# Copyright:   (c) GRSP 2013
-# Licence:     <your licence>
+# Created: 30-05-2013
+# Copyright: (c) GRSP 2013
+# Licence: <your licence>
 #-------------------------------------------------------------------------------
 
 
@@ -28,7 +28,7 @@ def fetch_all_teams(soup):
     teams=soup.find('ul',{"class":"team-links"})
     for li in teams.findAll('li'):
         team= li.find('a')['href']
-##        print team
+## print team
         if(team.strip()[-1]=="/"):
             teamlink='http://www.11v11.com'+team.strip()+'tab/matches/'
 
@@ -39,32 +39,32 @@ def fetch_all_teams(soup):
         teamsList[tm]=teamlink
 
     teamsList = collections.OrderedDict(sorted(teamsList.items()))
-##    print teamsList
-##    sys.exit()
-##    print teamsList
+## print teamsList
+## sys.exit()
+## print teamsList
     return teamsList
 
 
 def fetch_all_years(teamsoup):
     yearList=dict()
-##    print teamsoup
-##    teamhtml = requests.get("http://www.11v11.com/teams/aston-villa/tab/matches").text
-##    teamsoup = BeautifulSoup(teamhtml)
+## print teamsoup
+## teamhtml = requests.get("http://www.11v11.com/teams/aston-villa/tab/matches").text
+## teamsoup = BeautifulSoup(teamhtml)
 
     seasons=teamsoup.find('ul',{"id":"season"})
-##    print seasons
+## print seasons
 
     for li in seasons.findAll('li'):
-        yearlink =  li.find('a')['href']
+        yearlink = li.find('a')['href']
 
-##        print yearlink
+## print yearlink
 
         yr=li.find('a').text
         yearList[yr]=yearlink
 
     yearList = collections.OrderedDict(sorted(yearList.items()))
-##    print yearList
-##    sys.exit()
+## print yearList
+## sys.exit()
     return yearList
 
 def fetch_all_matches(yearsoup):
@@ -108,8 +108,8 @@ def main():
     for team in teamsList.keys():
         print "Team: ",team
         teamhtml = requests.get(teamsList[team]).text
-##        print teamsList[team]
-##        print "Team Html: ",teamsList[team]
+## print teamsList[team]
+## print "Team Html: ",teamsList[team]
         teamsoup = BeautifulSoup(teamhtml)
         yearList=fetch_all_years(teamsoup)
 
@@ -154,7 +154,7 @@ def main():
                         else:
                             cot2.writerow(matchList[match])
 
-##                        sys.exit()
+## sys.exit()
 
             else:
                 print 'No Matches for this year.'
@@ -168,3 +168,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

@@ -38,8 +38,7 @@ def fetch_all_teams(soup):
 
         tm=li.find('a').text
         teamsList[tm]=teamlink
-        print teamlink
-    sys.exit();
+
     teamsList = collections.OrderedDict(sorted(teamsList.items()))
 ##    print teamsList
 ##    sys.exit()
@@ -100,11 +99,7 @@ def main():
 
     #fetching all teams
     teamsList=fetch_all_teams(soup)
-
-    for temp in teamsList:
-        print temp
-    sys.exit()
-
+    
     fp = open('All_Matches.csv',"wb")
     cot=csv.writer(fp)
     cot.writerow(['Date', 'Match', 'Result', "Score", 'League', 'MatchLink'])
