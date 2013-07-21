@@ -18,6 +18,7 @@ import sys
 import os
 import traceback
 import unicodedata
+import urllib2
 
 # Extracts match details for all teams for all years.
 
@@ -87,19 +88,35 @@ def fetch_all_matches(yearsoup):
 
     return matchlist
 
-def main():
 
+# def internet_on():
+#     try:
+#         response=urllib2.urlopen('http://stackoverflow.com/questions/3764291/checking-network-connection')
+#         print response
+#         return response
+#     except urllib2.URLError as err: pass
+#     return False
+
+def main():
     allmatches=[]
     newpath = r'Results'
+    # result=False
+    # while result==False:
+    #     try:
+    #         result=internet_on()
+    #         print result
+    #     except:
+    #         continue
+
     if not os.path.exists(newpath): os.makedirs(newpath)
 
-    url='http://www.11v11.com/league-championship/'
+    url='http://www.11v11.com/league-two/'
     html = requests.get(url).text
     soup = BeautifulSoup(html)
 
     #fetching all teams
     teamsList=fetch_all_teams(soup)
-    
+
     fp = open('All_Matches.csv',"wb")
     cot=csv.writer(fp)
     cot.writerow(['Date', 'Match', 'Result', "Score", 'League', 'MatchLink'])
